@@ -1,31 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercedes benz portfolio</title>
+    <title>Mercedes-Benz | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Mercedes Benz</h1>
-        <nav>
-            <ul>
-                <li><a href="#accueil">accueil</a></li>
-                <li><a href="#à propos">à propos</a></li>
-                <li><a href="#travail">travail</a></li>
-                <li><a href="#CV">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigation principale">
+            <h1 class="brand">Mercedes-Benz</h1>
+            <ul class="nav-list">
+                <li><a class="nav-link" href="#accueil">Accueil</a></li>
+                <li><a class="nav-link" href="#a-propos">À propos</a></li>
+                <li><a class="nav-link" href="#travail">Travail</a></li>
+                <li><a class="nav-link" href="#cv">CV</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <section>
-        <h2>bienvenue sur le portfolio de mercedes benz</h2>
-        <figure>
-           <video width="400" height="240" controls>
-                <source src="Enregistrement 2026-09-05 140432.mp4" type="video/mp4">
-            </video>
-            <figcaption>mercedes benz C300</figcaption>
-        </figure>
+    <main>
+        <section id="accueil" class="hero-section">
+            <div class="section-inner hero-content">
+                <p class="eyebrow">Depuis 1926 · Stuttgart</p>
+                <h2 class="hero-title">Le mouvement<br>par excellence.</h2>
+                <p class="hero-copy">Un portfolio dédié au design, à la performance et à l'innovation Mercedes-Benz.</p>
+                <figure class="media-frame">
+                    <video controls>
+                        <source src="Enregistrement 2026-09-05 140432.mp4" type="video/mp4">
+                        Votre navigateur ne prend pas en charge la vidéo.
+                    </video>
+                    <figcaption>Mercedes-Benz C300</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="a-propos" class="content-section">
+            <div class="section-inner">
+                <h2 class="section-heading">À propos</h2>
+                <p class="about-copy">Mercedes-Benz est une marque automobile allemande de renommée mondiale, connue pour ses véhicules de luxe, ses performances exceptionnelles et son innovation technologique. Fondée en 1926, la marque a su s'imposer comme un symbole de qualité et d'élégance dans l'industrie automobile. Mercedes-Benz propose une large gamme de modèles, allant des berlines élégantes aux SUV spacieux, en passant par les voitures sportives et les véhicules électriques. La marque est également reconnue pour son engagement envers la sécurité, l'efficacité énergétique et le développement durable.</p>
+                <div class="gallery">
+                    <figure class="gallery-item">
+                        <img class="gallery-image" src="mercedes C300.png" alt="Mercedes-Benz C300">
+                        <figcaption>Mercedes-Benz C300</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img class="gallery-image" src="MERCEDES.png" alt="Logo Mercedes-Benz">
+                        <figcaption>L'étoile, signature de la marque</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="travail" class="content-section">
+            <div class="section-inner">
+                <h2 class="section-heading">Travail</h2>
+                <table class="models-table">
+                    <caption>Quelques modèles emblématiques</caption>
+                    <thead>
+                        <tr>
+                            <th>Modèle</th>
+                            <th>Année</th>
+                            <th>Catégorie</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Classe C300</td><td>2023</td><td>Berline</td></tr>
+                        <tr><td>Classe E</td><td>2022</td><td>Berline</td></tr>
+                        <tr><td>GLE</td><td>2023</td><td>SUV</td></tr>
+                        <tr><td>EQS</td><td>2024</td><td>Électrique</td></tr>
+                    </tbody>
+                </table>
+                <ul class="feature-list">
+                    <li>Moteurs performants et efficaces</li>
+                    <li>Technologie de conduite assistée</li>
+                    <li>Confort et finition haut de gamme</li>
+                    <li>Gamme électrique en expansion</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="cv" class="content-section">
+            <div class="section-inner">
+                <h2 class="section-heading">CV</h2>
+                <p>Fiche technique et informations complémentaires sur la marque.</p>
+                <a class="cv-link" href="cv-mercedes.pdf" target="_blank" rel="noopener">Télécharger la fiche PDF</a>
+                <form>
+                    <label class="form-label" for="modele">Choisissez un modèle pour voir sa fiche :</label>
+                    <select id="modele" name="modele">
+                        <option value="c300">Classe C300</option>
+                        <option value="classe-e">Classe E</option>
+                        <option value="gle">GLE</option>
+                        <option value="eqs">EQS</option>
+                    </select>
+                    <button class="primary-button" type="submit">Voir la fiche</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section">
+            <div class="section-inner">
+                <h2 class="section-heading">Contact</h2>
+                <form>
+                    <label class="form-label" for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    <label class="form-label" for="email">Adresse e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="vous@exemple.com" required>
+                    <label class="form-label" for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                    <button class="primary-button" type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <p>&copy; 2026 Mercedes-Benz Portfolio. Tous droits réservés.</p>
+            <p><a href="#accueil">Accueil</a> · <a href="https://www.mercedes-benz.com" target="_blank" rel="noopener">Site officiel</a></p>
+        </div>
+    </footer>
+</body>
+</html>
     </section>
 
     <section>
