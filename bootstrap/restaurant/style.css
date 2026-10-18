@@ -1,0 +1,121 @@
+/* Thème restaurant : tons chauds (bordeaux / doré / crème) */
+:root {
+    --resto-primary: #8b1e1e;
+    --resto-gold: #d4a017;
+    --resto-cream: #fdf6ec;
+    --resto-dark: #2b1a12;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* compense la navbar fixe */
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, .navbar-brand, .card-title {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(43, 26, 18, 0.92);
+}
+
+.navbar-brand {
+    color: var(--resto-gold) !important;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--resto-gold) !important;
+}
+
+/* Héros */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+        url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600") center / cover no-repeat;
+}
+
+/* Boutons personnalisés */
+.btn-resto {
+    background-color: var(--resto-primary);
+    color: #fff;
+    border: none;
+}
+
+.btn-resto:hover {
+    background-color: var(--resto-gold);
+    color: var(--resto-dark);
+}
+
+.btn-outline-resto {
+    border: 2px solid var(--resto-primary);
+    color: var(--resto-primary);
+}
+
+.btn-outline-resto:hover {
+    background-color: var(--resto-primary);
+    color: #fff;
+}
+
+/* Titres de section */
+.section-title {
+    color: var(--resto-primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Cartes du menu */
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.price {
+    color: var(--resto-primary);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.bg-cream {
+    background-color: var(--resto-cream);
+}
+
+/* Pied de page */
+.footer {
+    background-color: var(--resto-dark);
+}
+
+.social a {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.social a:hover {
+    color: var(--resto-gold);
+}
+
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .social a {
+        margin: 0 0.5rem;
+    }
+}

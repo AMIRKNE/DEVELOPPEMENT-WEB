@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Évasion Voyages - Agence de voyage</title>
+
+    <!-- Bootstrap 5 + icônes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===== BARRE DE NAVIGATION ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#accueil"><i class="bi bi-airplane-fill"></i> Évasion Voyages</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav"
+                aria-controls="menuNav" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#destinations">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#circuits">Circuits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== SECTION HÉROS ===== -->
+    <header id="accueil" class="hero d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container">
+            <span class="badge rounded-pill bg-warning text-dark mb-3 px-3 py-2">-20% sur les réservations d'été</span>
+            <h1 class="display-3 fw-bold">Explorez le monde avec nous</h1>
+            <p class="lead mb-4">Des voyages sur mesure vers les plus belles destinations de la planète.</p>
+            <a href="#destinations" class="btn btn-voyage btn-lg px-5 rounded-pill">Réserver maintenant</a>
+        </div>
+    </header>
+
+    <!-- ===== SECTION DESTINATIONS (grille de cartes) ===== -->
+    <section id="destinations" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Destinations populaires</h2>
+            <p class="text-center text-muted mb-5">Laissez-vous inspirer par nos coups de cœur</p>
+
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800" class="card-img-top" alt="Paris">
+                        <div class="card-body">
+                            <h5 class="card-title">Paris, France <span class="badge bg-voyage">dès 450 000 FCFA</span></h5>
+                            <p class="card-text text-muted">La ville lumière : tour Eiffel, musées, gastronomie et balades romantiques sur la Seine.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=800" class="card-img-top" alt="Bali">
+                        <div class="card-body">
+                            <h5 class="card-title">Bali, Indonésie <span class="badge bg-voyage">dès 750 000 FCFA</span></h5>
+                            <p class="card-text text-muted">Rizières en terrasses, temples millénaires et plages paradisiaques au cœur de l'océan Indien.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?w=800" class="card-img-top" alt="Marrakech">
+                        <div class="card-body">
+                            <h5 class="card-title">Marrakech, Maroc <span class="badge bg-voyage">dès 300 000 FCFA</span></h5>
+                            <p class="card-text text-muted">Souks colorés, riads traditionnels et excursions inoubliables dans le désert.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SECTION CIRCUITS (accordéon) ===== -->
+    <section id="circuits" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Nos circuits organisés</h2>
+            <p class="text-center text-muted mb-5">Tout est prévu, vous n'avez plus qu'à profiter</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <div class="accordion" id="accordeonCircuits">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#circuit1" aria-expanded="true" aria-controls="circuit1">
+                                    <i class="bi bi-sun me-2"></i> Safari au Kenya — 7 jours
+                                </button>
+                            </h2>
+                            <div id="circuit1" class="accordion-collapse collapse show" data-bs-parent="#accordeonCircuits">
+                                <div class="accordion-body">
+                                    <p>Partez à la rencontre des « Big Five » dans la réserve du Masai Mara. Hébergement en lodge, guide francophone et pension complète inclus.</p>
+                                    <a href="#contact" class="link-voyage">Voir les détails <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#circuit2" aria-expanded="false" aria-controls="circuit2">
+                                    <i class="bi bi-buildings me-2"></i> Capitales européennes — 10 jours
+                                </button>
+                            </h2>
+                            <div id="circuit2" class="accordion-collapse collapse" data-bs-parent="#accordeonCircuits">
+                                <div class="accordion-body">
+                                    <p>Paris, Bruxelles, Amsterdam et Berlin en train. Visites guidées des monuments incontournables et temps libre dans chaque ville.</p>
+                                    <a href="#contact" class="link-voyage">Voir les détails <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#circuit3" aria-expanded="false" aria-controls="circuit3">
+                                    <i class="bi bi-water me-2"></i> Croisière aux Maldives — 5 jours
+                                </button>
+                            </h2>
+                            <div id="circuit3" class="accordion-collapse collapse" data-bs-parent="#accordeonCircuits">
+                                <div class="accordion-body">
+                                    <p>Séjour en bungalow sur pilotis, plongée avec masque et tuba et dîner sur une île privée. Le circuit idéal pour une lune de miel.</p>
+                                    <a href="#contact" class="link-voyage">Voir les détails <i class="bi bi-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FORMULAIRE DE CONTACT ===== -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Planifiez votre voyage</h2>
+            <p class="text-center text-muted mb-5">Remplissez le formulaire, un conseiller vous répond sous 24 h</p>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <form class="p-4 rounded shadow-sm bg-white">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="nom" class="form-label">Nom complet</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Adresse électronique</label>
+                                <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="destination" class="form-label">Destination d'intérêt</label>
+                                <select class="form-select" id="destination" required>
+                                    <option value="" selected disabled>Choisissez une destination</option>
+                                    <option>Paris, France</option>
+                                    <option>Bali, Indonésie</option>
+                                    <option>Marrakech, Maroc</option>
+                                    <option>Safari au Kenya</option>
+                                    <option>Maldives</option>
+                                    <option>Autre</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Dates, nombre de voyageurs, budget..." required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="newsletter">
+                                    <label class="form-check-label" for="newsletter">Recevoir nos offres par email</label>
+                                </div>
+                            </div>
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-voyage btn-lg px-5 rounded-pill">Envoyer</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PIED DE PAGE ===== -->
+    <footer class="footer py-4 text-white">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <p class="mb-0">&copy; 2026 Évasion Voyages. Tous droits réservés.</p>
+            <div class="social">
+                <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

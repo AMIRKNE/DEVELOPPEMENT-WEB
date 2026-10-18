@@ -1,0 +1,123 @@
+/* Thème agence de voyage : bleu océan / turquoise / sable */
+:root {
+    --voyage-primary: #0077b6;
+    --voyage-accent: #00b4d8;
+    --voyage-dark: #03045e;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* compense la navbar fixe */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(3, 4, 94, 0.9);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--voyage-accent) !important;
+}
+
+/* Héros */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600") center / cover no-repeat;
+}
+
+/* Boutons, badges, liens */
+.btn-voyage {
+    background-color: var(--voyage-primary);
+    color: #fff;
+    border: none;
+}
+
+.btn-voyage:hover {
+    background-color: var(--voyage-accent);
+    color: #fff;
+}
+
+.bg-voyage {
+    background-color: var(--voyage-accent);
+    font-size: 0.7rem;
+    vertical-align: middle;
+}
+
+.link-voyage {
+    color: var(--voyage-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.link-voyage:hover {
+    color: var(--voyage-accent);
+}
+
+/* Titres de section */
+.section-title {
+    color: var(--voyage-dark);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+/* Cartes destinations */
+.card {
+    border: none;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+/* Accordéon aux couleurs de l'agence */
+.accordion-button:not(.collapsed) {
+    background-color: #e0f4fb;
+    color: var(--voyage-dark);
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 180, 216, 0.35);
+}
+
+/* Pied de page */
+.footer {
+    background-color: var(--voyage-dark);
+}
+
+.social a {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+}
+
+.social a:hover {
+    color: var(--voyage-accent);
+}
+
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .social a {
+        margin: 0 0.5rem;
+    }
+}
