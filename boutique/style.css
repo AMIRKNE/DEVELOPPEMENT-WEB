@@ -1,0 +1,434 @@
+/* =========================================================
+   VARIABLES : couleurs et valeurs réutilisées partout
+   ========================================================= */
+:root {
+    --primary: #ff6b35;      /* orange : boutons, accents */
+    --primary-dark: #e85a26;
+    --dark: #1d1d2c;         /* texte et fonds sombres */
+    --gray: #6b6b7b;         /* texte secondaire */
+    --light: #f6f6f9;        /* fonds de section clairs */
+    --white: #ffffff;
+    --radius: 12px;
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================================
+   BASE : remise à zéro et styles généraux
+   ========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;   /* défilement fluide vers les ancres */
+    scroll-padding-top: 70px;  /* évite que l'en-tête fixe cache les titres */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background-color: var(--white);
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Conteneur centré avec une largeur maximale */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Bouton principal */
+.btn {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn--small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+/* Titres de section */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 40px;
+}
+
+/* =========================================================
+   EN-TÊTE ET NAVIGATION
+   ========================================================= */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    z-index: 100;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+.nav__list {
+    display: flex;
+    gap: 32px;
+}
+
+.nav__list a {
+    font-weight: 500;
+    position: relative;
+}
+
+/* Petit soulignement animé au survol */
+.nav__list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: width 0.3s;
+}
+
+.nav__list a:hover::after {
+    width: 100%;
+}
+
+/* Le bouton burger et la case à cocher sont cachés sur grand écran */
+.menu-toggle,
+.burger {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    width: 26px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: var(--dark);
+    border-radius: 2px;
+}
+
+/* =========================================================
+   BANNIÈRE (HÉROS)
+   ========================================================= */
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    margin-top: 70px; /* hauteur de l'en-tête fixe */
+    color: var(--white);
+    /* Dégradé sombre par-dessus l'image pour rendre le texte lisible */
+    background: linear-gradient(90deg, rgba(29, 29, 44, 0.85), rgba(29, 29, 44, 0.2)),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600") center / cover no-repeat;
+}
+
+.hero__content {
+    max-width: 1200px;
+}
+
+.hero__tag {
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    max-width: 600px;
+    margin: 10px 0 20px;
+}
+
+.hero__text {
+    font-size: 1.15rem;
+    max-width: 480px;
+    margin-bottom: 32px;
+}
+
+/* =========================================================
+   SECTION PRODUITS
+   ========================================================= */
+.products {
+    padding: 80px 0;
+    background-color: var(--light);
+}
+
+/* Grille : 4 colonnes sur ordinateur (réduites par les media queries) */
+.products__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover; /* l'image remplit le cadre sans être déformée */
+}
+
+/* Étiquette "Nouveau" / promo en haut de la carte */
+.card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: var(--dark);
+    color: var(--white);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+.card__badge--promo {
+    background-color: #e63946;
+}
+
+.card__body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* toutes les cartes ont la même hauteur */
+    padding: 20px;
+}
+
+.card__body h3 {
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+}
+
+.card__body p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+/* Prix et bouton toujours alignés en bas de la carte */
+.card__footer {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card__price {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* =========================================================
+   AVANTAGES
+   ========================================================= */
+.features {
+    padding: 60px 0;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    text-align: center;
+}
+
+.feature__icon {
+    font-size: 2.5rem;
+}
+
+.feature p {
+    color: var(--gray);
+}
+
+/* =========================================================
+   PIED DE PAGE
+   ========================================================= */
+.footer {
+    background-color: var(--dark);
+    color: #cfcfdc;
+    padding: 60px 0 20px;
+}
+
+.footer__grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 32px;
+}
+
+.footer .logo {
+    color: var(--white);
+}
+
+.footer h4 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.footer li {
+    margin-bottom: 8px;
+}
+
+.footer a:hover {
+    color: var(--primary);
+}
+
+.footer__copy {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding-top: 20px;
+    font-size: 0.85rem;
+}
+
+/* =========================================================
+   RESPONSIVE : MEDIA QUERIES
+   ========================================================= */
+
+/* Tablette (≤ 992px) : 2 produits par ligne */
+@media (max-width: 992px) {
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Mobile (≤ 768px) : menu burger, tout sur une colonne */
+@media (max-width: 768px) {
+    /* Affiche l'icône burger */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    /* Le menu devient un panneau déroulant sous l'en-tête, caché par défaut */
+    .nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.06);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 5%;
+    }
+
+    .nav__list li {
+        padding: 14px 0;
+        border-bottom: 1px solid var(--light);
+    }
+
+    /* Quand la case est cochée (clic sur le burger), le menu s'ouvre */
+    .menu-toggle:checked ~ .nav {
+        max-height: 300px;
+    }
+
+    .hero {
+        min-height: 75vh;
+        text-align: center;
+        background: linear-gradient(rgba(29, 29, 44, 0.7), rgba(29, 29, 44, 0.7)),
+            url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900") center / cover no-repeat;
+    }
+
+    .hero h1,
+    .hero__text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .features__grid,
+    .footer__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Petit mobile (≤ 576px) : 1 produit par ligne */
+@media (max-width: 576px) {
+    .products__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .products {
+        padding: 60px 0;
+    }
+}

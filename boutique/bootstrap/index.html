@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Style - Boutique (version Bootstrap)</title>
+    <!-- Bootstrap 5, icônes Bootstrap et police Poppins -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= EN-TÊTE : navbar Bootstrap ================= -->
+    <nav class="navbar navbar-expand-md bg-white shadow-sm fixed-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="#accueil">Urban<span>Style</span></a>
+
+            <!-- Bouton burger : visible seulement sur petit écran -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+                aria-controls="nav" aria-expanded="false" aria-label="Ouvrir le menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-md-center gap-md-3">
+                    <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produits">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#avantages">Avantages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <!-- Panier avec compteur (badge) -->
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#" aria-label="Panier">
+                            <i class="bi bi-bag fs-5"></i>
+                            <span id="compteur-panier" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-orange">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= CARROUSEL (héros) ================= -->
+    <header id="accueil" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#accueil" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Diapo 1"></button>
+            <button type="button" data-bs-target="#accueil" data-bs-slide-to="1" aria-label="Diapo 2"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active hero hero--1">
+                <div class="container h-100 d-flex flex-column justify-content-center text-white text-center text-md-start">
+                    <p class="hero__tag">Nouvelle collection 2026</p>
+                    <h1 class="display-4 fw-bold">Le style qui vous ressemble</h1>
+                    <p class="lead col-md-6 px-0">Vêtements et accessoires tendance, livrés chez vous en 48 h.</p>
+                    <div><a href="#produits" class="btn btn-orange btn-lg rounded-pill px-4">Découvrir les produits</a></div>
+                </div>
+            </div>
+            <div class="carousel-item hero hero--2">
+                <div class="container h-100 d-flex flex-column justify-content-center text-white text-center text-md-start">
+                    <p class="hero__tag">Soldes d'automne</p>
+                    <h1 class="display-4 fw-bold">Jusqu'à -30 %</h1>
+                    <p class="lead col-md-6 px-0">Sur une sélection d'accessoires, pour une durée limitée.</p>
+                    <div><a href="#produits" class="btn btn-orange btn-lg rounded-pill px-4">J'en profite</a></div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev d-none d-md-flex" type="button" data-bs-target="#accueil" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Précédent</span>
+        </button>
+        <button class="carousel-control-next d-none d-md-flex" type="button" data-bs-target="#accueil" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Suivant</span>
+        </button>
+    </header>
+
+    <!-- ================= SECTION PRODUITS (grille + cartes) ================= -->
+    <section id="produits" class="py-5 bg-light">
+        <div class="container py-md-4">
+            <h2 class="text-center fw-bold">Nos produits phares</h2>
+            <p class="text-center text-muted mb-5">Une sélection pensée pour vous</p>
+
+            <!-- 1 colonne sur mobile, 2 sur tablette, 4 sur ordinateur -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+
+                <div class="col">
+                    <div class="card produit h-100 border-0 shadow-sm">
+                        <span class="badge bg-dark position-absolute m-3">Nouveau</span>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" class="card-img-top" alt="Baskets rouges">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Baskets Runner</h5>
+                            <p class="card-text text-muted small">Légères et confortables, idéales pour la ville comme pour le sport.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <span class="prix">35 000 FCFA</span>
+                                <button class="btn btn-orange btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalAchat" data-produit="Baskets Runner">Acheter maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card produit h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" class="card-img-top" alt="Montre blanche">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Montre Classic</h5>
+                            <p class="card-text text-muted small">Design minimaliste, bracelet en cuir et cadran résistant à l'eau.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <span class="prix">28 000 FCFA</span>
+                                <button class="btn btn-orange btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalAchat" data-produit="Montre Classic">Acheter maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card produit h-100 border-0 shadow-sm">
+                        <span class="badge bg-danger position-absolute m-3">-15%</span>
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" class="card-img-top" alt="Casque audio">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Casque Audio Pro</h5>
+                            <p class="card-text text-muted small">Son haute fidélité, réduction de bruit et 30 h d'autonomie.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <span class="prix">45 000 FCFA</span>
+                                <button class="btn btn-orange btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalAchat" data-produit="Casque Audio Pro">Acheter maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card produit h-100 border-0 shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" class="card-img-top" alt="Sac à dos">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sac à dos Urbain</h5>
+                            <p class="card-text text-muted small">Compartiment ordinateur 15", tissu imperméable et nombreuses poches.</p>
+                            <div class="mt-auto d-flex justify-content-between align-items-center flex-wrap gap-2">
+                                <span class="prix">22 000 FCFA</span>
+                                <button class="btn btn-orange btn-sm rounded-pill" data-bs-toggle="modal" data-bs-target="#modalAchat" data-produit="Sac à dos Urbain">Acheter maintenant</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= AVANTAGES ================= -->
+    <section id="avantages" class="py-5">
+        <div class="container">
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <i class="bi bi-truck fs-1 text-orange"></i>
+                    <h5 class="mt-2">Livraison rapide</h5>
+                    <p class="text-muted">Livré en 48 h partout en ville.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-shield-lock fs-1 text-orange"></i>
+                    <h5 class="mt-2">Paiement sécurisé</h5>
+                    <p class="text-muted">Carte bancaire ou Mobile Money.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="bi bi-arrow-counterclockwise fs-1 text-orange"></i>
+                    <h5 class="mt-2">Retour gratuit</h5>
+                    <p class="text-muted">14 jours pour changer d'avis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PIED DE PAGE ================= -->
+    <footer id="contact" class="footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-md-6">
+                    <a href="#accueil" class="logo text-white fs-4">Urban<span>Style</span></a>
+                    <p class="mt-2">Votre boutique de mode en ligne depuis 2020.</p>
+                    <div class="d-flex gap-3 justify-content-center justify-content-md-start fs-5">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white">Liens</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#produits">Produits</a></li>
+                        <li><a href="#avantages">Avantages</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white">Contact</h6>
+                    <ul class="list-unstyled small">
+                        <li>contact@urbanstyle.com</li>
+                        <li>+225 07 00 00 00 00</li>
+                        <li>Abidjan</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="border-secondary">
+            <p class="text-center small mb-0">&copy; 2026 UrbanStyle. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- ================= FENÊTRE MODALE : confirmation d'achat ================= -->
+    <div class="modal fade" id="modalAchat" tabindex="-1" aria-labelledby="modalTitre" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitre">Ajouter au panier</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Produit : <strong id="modalProduit"></strong></p>
+                    <label for="quantite" class="form-label">Quantité</label>
+                    <input type="number" id="quantite" class="form-control" value="1" min="1" max="10">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Annuler</button>
+                    <button type="button" id="btnConfirmer" class="btn btn-orange" data-bs-dismiss="modal">Confirmer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= TOAST : notification "ajouté au panier" ================= -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="toastPanier" class="toast align-items-center text-bg-dark border-0" role="status" aria-live="polite">
+            <div class="d-flex">
+                <div class="toast-body"><i class="bi bi-check-circle text-orange"></i> Produit ajouté au panier !</div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Fermer"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Affiche le nom du produit cliqué dans la fenêtre modale
+        const modal = document.getElementById('modalAchat');
+        modal.addEventListener('show.bs.modal', (event) => {
+            const produit = event.relatedTarget.getAttribute('data-produit');
+            document.getElementById('modalProduit').textContent = produit;
+            document.getElementById('quantite').value = 1;
+        });
+
+        // À la confirmation : met à jour le compteur du panier et affiche le toast
+        let totalPanier = 0;
+        document.getElementById('btnConfirmer').addEventListener('click', () => {
+            totalPanier += Number(document.getElementById('quantite').value) || 1;
+            document.getElementById('compteur-panier').textContent = totalPanier;
+            bootstrap.Toast.getOrCreateInstance(document.getElementById('toastPanier')).show();
+        });
+
+        // Ferme le menu mobile après un clic sur un lien
+        document.querySelectorAll('#nav .nav-link:not([aria-label="Panier"])')
+            .forEach((lien) => lien.addEventListener('click', () => {
+                const menu = bootstrap.Collapse.getInstance(document.getElementById('nav'));
+                if (menu) menu.hide();
+            }));
+    </script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Style - Boutique en ligne</title>
+    <!-- Police Google : Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= EN-TÊTE ================= -->
+    <header class="header">
+        <div class="container header__inner">
+            <!-- Logo -->
+            <a href="#accueil" class="logo">Urban<span>Style</span></a>
+
+            <!-- Case à cocher cachée : permet d'ouvrir/fermer le menu mobile sans JavaScript -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="burger" aria-label="Ouvrir le menu">
+                <span></span><span></span><span></span>
+            </label>
+
+            <!-- Menu de navigation -->
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="#avantages">Avantages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ================= BANNIÈRE (HÉROS) ================= -->
+    <section id="accueil" class="hero">
+        <div class="container hero__content">
+            <p class="hero__tag">Nouvelle collection 2026</p>
+            <h1>Le style qui vous ressemble</h1>
+            <p class="hero__text">Vêtements et accessoires tendance, livrés chez vous en 48 h.</p>
+            <a href="#produits" class="btn">Découvrir les produits</a>
+        </div>
+    </section>
+
+    <!-- ================= SECTION PRODUITS ================= -->
+    <section id="produits" class="products">
+        <div class="container">
+            <h2 class="section-title">Nos produits phares</h2>
+            <p class="section-subtitle">Une sélection pensée pour vous</p>
+
+            <!-- Grille de fiches produits -->
+            <div class="products__grid">
+
+                <!-- Produit 1 -->
+                <article class="card">
+                    <span class="card__badge">Nouveau</span>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600" alt="Baskets rouges">
+                    <div class="card__body">
+                        <h3>Baskets Runner</h3>
+                        <p>Légères et confortables, idéales pour la ville comme pour le sport.</p>
+                        <div class="card__footer">
+                            <span class="card__price">35 000 FCFA</span>
+                            <a href="#" class="btn btn--small">Acheter maintenant</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 2 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600" alt="Montre blanche">
+                    <div class="card__body">
+                        <h3>Montre Classic</h3>
+                        <p>Design minimaliste, bracelet en cuir et cadran résistant à l'eau.</p>
+                        <div class="card__footer">
+                            <span class="card__price">28 000 FCFA</span>
+                            <a href="#" class="btn btn--small">Acheter maintenant</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 3 -->
+                <article class="card">
+                    <span class="card__badge card__badge--promo">-15%</span>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600" alt="Casque audio">
+                    <div class="card__body">
+                        <h3>Casque Audio Pro</h3>
+                        <p>Son haute fidélité, réduction de bruit et 30 h d'autonomie.</p>
+                        <div class="card__footer">
+                            <span class="card__price">45 000 FCFA</span>
+                            <a href="#" class="btn btn--small">Acheter maintenant</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Produit 4 -->
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600" alt="Sac à dos">
+                    <div class="card__body">
+                        <h3>Sac à dos Urbain</h3>
+                        <p>Compartiment ordinateur 15", tissu imperméable et nombreuses poches.</p>
+                        <div class="card__footer">
+                            <span class="card__price">22 000 FCFA</span>
+                            <a href="#" class="btn btn--small">Acheter maintenant</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= AVANTAGES ================= -->
+    <section id="avantages" class="features">
+        <div class="container features__grid">
+            <div class="feature">
+                <span class="feature__icon">🚚</span>
+                <h3>Livraison rapide</h3>
+                <p>Livré en 48 h partout en ville.</p>
+            </div>
+            <div class="feature">
+                <span class="feature__icon">🔒</span>
+                <h3>Paiement sécurisé</h3>
+                <p>Carte bancaire ou Mobile Money.</p>
+            </div>
+            <div class="feature">
+                <span class="feature__icon">↩️</span>
+                <h3>Retour gratuit</h3>
+                <p>14 jours pour changer d'avis.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PIED DE PAGE ================= -->
+    <footer id="contact" class="footer">
+        <div class="container footer__grid">
+            <div>
+                <a href="#accueil" class="logo">Urban<span>Style</span></a>
+                <p>Votre boutique de mode en ligne depuis 2020.</p>
+            </div>
+            <div>
+                <h4>Liens</h4>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#produits">Produits</a></li>
+                    <li><a href="#avantages">Avantages</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li>contact@urbanstyle.com</li>
+                    <li>+225 07 00 00 00 00</li>
+                    <li>Abidjan, Côte d'Ivoire</li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer__copy">&copy; 2026 UrbanStyle. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>

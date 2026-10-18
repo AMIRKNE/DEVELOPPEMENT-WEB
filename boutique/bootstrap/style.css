@@ -1,0 +1,147 @@
+/* Personnalisation de Bootstrap aux couleurs de la boutique */
+:root {
+    --orange: #ff6b35;
+    --orange-fonce: #e85a26;
+    --sombre: #1d1d2c;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px; /* compense la navbar fixe */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 66px; /* hauteur de la navbar fixe */
+}
+
+/* Logo */
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--sombre);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--orange);
+}
+
+/* Liens de navigation */
+.navbar .nav-link {
+    font-weight: 500;
+    color: var(--sombre);
+}
+
+.navbar .nav-link:hover {
+    color: var(--orange);
+}
+
+/* Classes de couleur personnalisées */
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
+.text-orange {
+    color: var(--orange) !important;
+}
+
+.btn-orange {
+    background-color: var(--orange);
+    border-color: var(--orange);
+    color: #fff;
+}
+
+.btn-orange:hover,
+.btn-orange:focus {
+    background-color: var(--orange-fonce);
+    border-color: var(--orange-fonce);
+    color: #fff;
+}
+
+/* Diapositives du carrousel */
+.hero {
+    height: 85vh;
+    min-height: 420px;
+}
+
+.hero--1 {
+    background: linear-gradient(90deg, rgba(29, 29, 44, 0.85), rgba(29, 29, 44, 0.25)),
+        url("https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1600") center / cover no-repeat;
+}
+
+.hero--2 {
+    background: linear-gradient(90deg, rgba(29, 29, 44, 0.85), rgba(29, 29, 44, 0.25)),
+        url("https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1600") center / cover no-repeat;
+}
+
+.hero__tag {
+    color: var(--orange);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Cartes produits */
+.produit {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produit:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+.produit .badge {
+    z-index: 1;
+}
+
+.produit .card-img-top {
+    height: 220px;
+    object-fit: cover;
+}
+
+.prix {
+    font-weight: 700;
+    color: var(--orange);
+}
+
+/* Pied de page */
+.footer {
+    background-color: var(--sombre);
+    color: #cfcfdc;
+}
+
+.footer a {
+    color: #cfcfdc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--orange);
+}
+
+/* Mobile : texte du carrousel plus petit */
+@media (max-width: 767px) {
+    .hero {
+        height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Flèches du carrousel plus étroites pour ne pas recouvrir le texte */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Compteur du panier : légèrement descendu pour rester dans la barre */
+#compteur-panier {
+    top: 8px !important;
+    font-size: 0.65rem;
+}
