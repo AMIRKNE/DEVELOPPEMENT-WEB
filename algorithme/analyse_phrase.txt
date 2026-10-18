@@ -1,0 +1,69 @@
+ALGORITHME AnalysePhrase
+
+// But : lire une phrase terminée par un point, caractère par caractère,
+// et compter sa longueur, son nombre de mots et son nombre de voyelles.
+// Hypothèse : les mots sont séparés par un seul espace.
+
+VARIABLES
+    c        : CARACTÈRE   // caractère en cours de lecture
+    longueur : ENTIER      // compteur 1 : nombre de caractères
+    mots     : ENTIER      // compteur 2 : nombre de mots
+    voyelles : ENTIER      // compteur 3 : nombre de voyelles
+
+DÉBUT
+    // Initialisation des trois compteurs
+    longueur <- 0
+    mots     <- 0
+    voyelles <- 0
+
+    ÉCRIRE("Entrez une phrase terminée par un point :")
+
+    // Lecture du premier caractère
+    LIRE(c)
+
+    // On traite chaque caractère jusqu'à rencontrer le point
+    TANT QUE c <> '.' FAIRE
+
+        // 1) Chaque caractère lu augmente la longueur
+        longueur <- longueur + 1
+
+        // 2) Chaque espace sépare deux mots
+        SI c = ' ' ALORS
+            mots <- mots + 1
+        FIN SI
+
+        // 3) Vérifier si le caractère est une voyelle (minuscule ou majuscule)
+        SI c = 'a' OU c = 'e' OU c = 'i' OU c = 'o' OU c = 'u' OU c = 'y'
+           OU c = 'A' OU c = 'E' OU c = 'I' OU c = 'O' OU c = 'U' OU c = 'Y' ALORS
+            voyelles <- voyelles + 1
+        FIN SI
+
+        // Lecture du caractère suivant
+        LIRE(c)
+
+    FIN TANT QUE
+
+    // Le point est le dernier caractère : il fait partie de la phrase
+    longueur <- longueur + 1
+
+    // Il y a toujours un mot de plus que d'espaces
+    // (sauf si la phrase ne contient que le point)
+    SI longueur > 1 ALORS
+        mots <- mots + 1
+    FIN SI
+
+    // Affichage des résultats
+    ÉCRIRE("Longueur de la phrase : ", longueur)
+    ÉCRIRE("Nombre de mots : ", mots)
+    ÉCRIRE("Nombre de voyelles : ", voyelles)
+FIN
+
+
+------------------------------------------------------------
+EXEMPLE D'EXÉCUTION
+------------------------------------------------------------
+Phrase saisie : J'aime coder en Python.
+
+Longueur de la phrase : 23   (22 caractères + le point)
+Nombre de mots : 4           (3 espaces + 1)
+Nombre de voyelles : 8       (a, i, e, o, e, e, y, o)
