@@ -108,6 +108,27 @@ body {
     color: var(--orange);
 }
 
+/* Articles du panier */
+.cart-item__image {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.cart-item__favorite {
+    color: #6c757d;
+    font-size: 1.1rem;
+}
+
+.cart-item__favorite[aria-pressed="true"] {
+    color: #dc3545;
+}
+
+.cart-item__favorite:hover,
+.cart-item__favorite:focus-visible {
+    color: #dc3545;
+}
+
 /* Pied de page */
 .footer {
     background-color: var(--sombre);

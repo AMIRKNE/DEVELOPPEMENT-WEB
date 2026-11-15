@@ -49,8 +49,8 @@ La version Bootstrap reprend la même charte graphique et ajoute plusieurs compo
 - **Navbar** qui se replie automatiquement en menu burger, avec une icône de panier et un compteur (badge).
 - **Carrousel** à 2 diapositives dans la bannière (nouvelle collection et soldes).
 - **Grille** `row-cols-1 row-cols-sm-2 row-cols-lg-4` et **cartes** pour les produits.
-- **Fenêtre modale** : le bouton « Acheter maintenant » ouvre une fenêtre où l'on choisit la quantité.
-- **Toast** : une notification « Produit ajouté au panier » s'affiche et le compteur du panier augmente.
+- **Panier interactif** : la fenêtre modale permet de choisir une quantité, puis chaque ligne du panier permet de modifier la quantité, d'aimer l'article ou de le supprimer. Le compteur et le total sont recalculés après chaque action.
+- **Toast** : une notification « Produit ajouté au panier » s'affiche après l'ajout d'un article.
 - **Bootstrap Icons** pour les avantages et les réseaux sociaux.
 
 Le fichier `bootstrap/style.css` personnalise Bootstrap avec les couleurs de la boutique (classes `btn-orange`, `text-orange`, `bg-orange`).
