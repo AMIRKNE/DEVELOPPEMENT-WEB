@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cartes de prix — composant réutilisable</title>
+  <link rel="stylesheet" href="card.css" />
+  <style>
+    body {
+      margin: 0; min-height: 100vh; font-family: system-ui, sans-serif;
+      background: #f3f5fb; color: #1f2333;
+    }
+    header { text-align: center; padding: 56px 20px 32px; }
+    header h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 40px); }
+    header p { margin: 0; color: #6b7088; }
+    #pricing {
+      display: grid; gap: 28px; justify-content: center; align-items: stretch;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 300px));
+      padding: 20px 20px 72px; max-width: 1040px; margin: 0 auto;
+    }
+    #message { text-align: center; min-height: 24px; color: #16a34a; font-weight: 600; margin: 0 0 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Choisissez votre plan</h1>
+    <p>Trois cartes générées avec le même composant <code>Card(title, price, features)</code>.</p>
+  </header>
+
+  <main id="pricing" aria-label="Plans tarifaires"></main>
+  <p id="message" role="status" aria-live="polite"></p>
+
+  <script src="card.js"></script>
+  <script>
+    const container = document.getElementById("pricing");
+    const message = document.getElementById("message");
+
+    // Réaction commune au clic : le bouton répond enfin !
+    function handleSelect(title, btn) {
+      btn.textContent = "Essai activé ✓";
+      btn.disabled = true;
+      message.textContent = `Essai gratuit démarré pour le ${title}.`;
+    }
+
+    const plans = [
+      { title: "Plan de base", price: "9,99 $",
+        features: ["1 Go de stockage", "Support de base", "Toutes les fonctionnalités principales"] },
+      { title: "Plan Pro", price: "19,99 $", featured: true,
+        features: ["50 Go de stockage", "Support prioritaire", "Toutes les fonctionnalités", "Statistiques avancées"] },
+      { title: "Plan Entreprise", price: "49,99 $", buttonText: "Contacter l'équipe",
+        features: ["Stockage illimité", "Support 24 h/24, 7 j/7", "Comptes d'équipe", "Sécurité renforcée"] },
+    ];
+
+    plans.forEach(({ title, price, features, ...options }) => {
+      container.appendChild(Card(title, price, features, { ...options, onSelect: handleSelect }));
+    });
+  </script>
+</body>
+</html>

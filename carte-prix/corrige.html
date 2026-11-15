@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carte de prix — version corrigée</title>
+  <style>
+    .pricing {
+      width: 300px;
+      margin: 40px auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px #ccc;
+      padding: 20px;
+      text-align: left;
+      font-family: system-ui, sans-serif;
+      border-radius: 8px;
+    }
+    .title { font-size: 22px; font-weight: bold; margin: 0 0 8px; }
+    .price { font-size: 18px; color: green; margin: 0 0 12px; }
+    .features { list-style: none; padding-left: 0; margin: 0; }
+    .features li { padding: 4px; border-bottom: 1px solid #eee; }
+    .btn {
+      background: blue; color: white; padding: 10px 20px;
+      border: none; margin-top: 10px; cursor: pointer; border-radius: 4px;
+    }
+    .btn:hover { background: darkblue; }
+  </style>
+</head>
+<body>
+  <div class="pricing">
+    <h2 class="title">Plan de base</h2>
+    <p class="price">9,99 $ / mois</p>
+    <ul class="features">
+      <li>1 Go de stockage</li>
+      <li>Support de base</li>
+      <li>Toutes les fonctionnalités principales</li>
+    </ul>
+    <button class="btn" type="button" onclick="alert('Essai démarré pour le Plan de base !')">Démarrer l'essai</button>
+  </div>
+</body>
+</html>
