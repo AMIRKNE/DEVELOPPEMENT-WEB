@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KONE Amir Abdel — Développeur web &amp; mobile</title>
+<!-- Export de la page générée par Lovable (projet "Amir Portfolio", Tailwind v4 compilé) -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Syne:wght@600;700;800&display=swap" />
+<style>
+:root{
+  --spacing:.25rem;
+  --background:oklch(16% .04 262); --background-deep:oklch(11% .03 265);
+  --foreground:oklch(96% .01 250); --muted-foreground:oklch(74% .03 255);
+  --primary:oklch(69.6% .149 162.5); --primary-glow:oklch(71.5% .126 215.2);
+  --primary-foreground:oklch(16% .04 262); --secondary:oklch(25% .05 262);
+  --border:oklch(100% 0 0 / .1);
+  --font-sans:"Manrope",ui-sans-serif,system-ui,sans-serif;
+  --font-display:"Syne",ui-sans-serif,system-ui,sans-serif;
+  --gradient-night:radial-gradient(ellipse 80% 60% at 50% 0%,oklch(26% .07 258) 0%,transparent 70%),linear-gradient(180deg,var(--background) 0%,var(--background-deep) 100%);
+  --gradient-sun:linear-gradient(100deg,var(--primary) 0%,var(--primary-glow) 100%);
+  --shadow-glow:0 12px 40px -12px color-mix(in oklab,var(--primary) 70%,transparent);
+}
+*,::before,::after{box-sizing:border-box;border:0 solid var(--border);margin:0;padding:0}
+html{line-height:1.5;scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);background:var(--background);color:var(--foreground)}
+h1{font-size:inherit;font-weight:inherit} a{color:inherit;text-decoration:inherit} ul{list-style:none}
+@keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.inset-10{inset:calc(var(--spacing)*10)}
+.mx-auto{margin-inline:auto}.mt-6{margin-top:calc(var(--spacing)*6)}.mt-8{margin-top:calc(var(--spacing)*8)}.mt-10{margin-top:calc(var(--spacing)*10)}
+.flex{display:flex}.grid{display:grid}.hidden{display:none}.inline-flex{display:inline-flex}.aspect-square{aspect-ratio:1/1}
+.h-1\.5{height:calc(var(--spacing)*1.5)}.w-1\.5{width:calc(var(--spacing)*1.5)}.min-h-screen{min-height:100vh}.w-full{width:100%}
+.max-w-6xl{max-width:72rem}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}
+.animate-rise{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.justify-center{justify-content:center}
+.gap-2{gap:calc(var(--spacing)*2)}.gap-5{gap:calc(var(--spacing)*5)}.gap-12{gap:calc(var(--spacing)*12)}.justify-self-center{justify-self:center}
+.rounded-full{border-radius:9999px}.border{border-width:1px}.border-border{border-color:var(--border)}
+.bg-primary{background-color:var(--primary)}.bg-secondary\/60{background-color:color-mix(in oklab,var(--secondary) 60%,transparent)}
+.bg-night{background:var(--gradient-night)}.bg-sun{background:var(--gradient-sun)}
+.text-sun{background:var(--gradient-sun);-webkit-background-clip:text;background-clip:text;color:transparent}
+.px-4{padding-inline:1rem}.px-6{padding-inline:1.5rem}.px-7{padding-inline:1.75rem}.py-1\.5{padding-block:.375rem}.py-3\.5{padding-block:.875rem}.py-6{padding-block:1.5rem}.pb-20{padding-bottom:5rem}
+.text-center{text-align:center}.font-display{font-family:var(--font-display)}
+.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-base{font-size:1rem;line-height:1.5rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-8xl{font-size:6rem;line-height:1}
+.leading-\[1\.1\]{line-height:1.1!important}.leading-relaxed{line-height:1.625!important}
+.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-extrabold{font-weight:800}.tracking-tight{letter-spacing:-.025em}
+.text-foreground{color:var(--foreground)}.text-muted-foreground{color:var(--muted-foreground)}.text-primary{color:var(--primary)}.text-primary-foreground{color:var(--primary-foreground)}
+.opacity-60{opacity:.6}.opacity-90{opacity:.9}.shadow-glow{box-shadow:var(--shadow-glow)}
+.blur-3xl{filter:blur(64px)}.blur-md{filter:blur(12px)}.backdrop-blur{backdrop-filter:blur(8px)}
+.transition-colors{transition:color .15s}.transition-transform{transition:translate .15s,transform .15s}
+.hover\:text-foreground:hover{color:var(--foreground)}.hover\:-translate-y-0\.5:hover{translate:0 -.125rem}
+@media (min-width:40rem){.sm\:gap-8{gap:2rem}.sm\:text-sm{font-size:.875rem;line-height:1.25rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-6xl{font-size:3.75rem;line-height:1}}
+@media (min-width:48rem){.md\:text-7xl{font-size:4.5rem;line-height:1}}
+@media (min-width:64rem){.lg\:flex{display:flex}.lg\:grid-cols-\[1\.2fr_1fr\]{grid-template-columns:1.2fr 1fr}.lg\:items-center{align-items:center}.lg\:items-start{align-items:flex-start}.lg\:justify-center{justify-content:center}.lg\:text-left{text-align:left}}
+</style>
+</head>
+<body>
+<main id="accueil" class="bg-night relative flex min-h-screen flex-col text-foreground">
+  <header class="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
+    <a href="#accueil" class="font-display text-2xl font-extrabold tracking-tight">Amir<span class="text-primary">.</span></a>
+    <nav>
+      <ul class="flex items-center gap-5 text-sm font-medium text-muted-foreground sm:gap-8">
+        <li><a href="#accueil" class="transition-colors hover:text-foreground">Accueil</a></li>
+        <li><a href="#projets" class="transition-colors hover:text-foreground">Projets</a></li>
+        <li><a href="#contact" class="transition-colors hover:text-foreground">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="flex flex-1 items-center justify-center px-6 pb-20">
+    <div class="mx-auto grid w-full max-w-6xl items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
+      <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+        <span class="animate-rise inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur sm:text-sm"><span class="h-1.5 w-1.5 rounded-full bg-primary"></span>Étudiant L3 TWIN — ESATIC, Abidjan</span>
+        <h1 class="animate-rise mt-8 font-display text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl md:text-7xl" style="animation-delay:.1s">Bonjour, je suis <span class="text-sun">KONE Amir Abdel</span></h1>
+        <p class="animate-rise mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg" style="animation-delay:.2s">Développeur web &amp; mobile passionné par l'image numérique. Je conçois des interfaces modernes et des applications utiles pour l'Afrique.</p>
+        <a href="#projets" class="animate-rise shadow-glow bg-sun mt-10 inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5 sm:text-base" style="animation-delay:.3s">Voir mes projets<span aria-hidden="true">→</span></a>
+      </div>
+      <div aria-hidden="true" class="relative hidden aspect-square w-full max-w-md justify-self-center lg:flex lg:items-center lg:justify-center">
+        <div class="bg-sun absolute inset-0 rounded-full opacity-60 blur-3xl"></div>
+        <div class="bg-sun absolute inset-10 rounded-full opacity-90 blur-md"></div>
+        <span class="relative font-display text-8xl font-extrabold tracking-tight text-primary-foreground">KA</span>
+      </div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
